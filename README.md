@@ -1,8 +1,8 @@
 选课管理系统
 ============
-# 登录界面
+# 登陆界面
 ![image](https://github.com/akaduo2019/Courses-Choosing-Management-System/raw/master/screenshot/登录界面1.png)
-![image](https://github.com/akaduo2019/Courses-Choosing-Management-System/raw/master/screenshot/登录界面2.png)
+![image](https://github.com/akaduo2019/Courses-Choosing-Management-System/raw/master/screenshot/登陆界面2.png)
 
 # 注册界面
 ![image](https://github.com/akaduo2019/Courses-Choosing-Management-System/raw/master/screenshot/注册界面.png)
