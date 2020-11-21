@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>810</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>810</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>810</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>教务管理</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/1/icons/window_icon.png</normaloff>:/1/icons/window_icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>80</y>
+      <width>860</width>
+      <height>560</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>860</width>
+      <height>560</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>860</width>
+      <height>560</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{border-radius: 10px;border: 2px groove gray;border-style: outset;}
+QPushButton:hover{color: #66A3FF;background:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #fafafa, stop: 0.4 #f4f4f4,stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);}
+QPushButton:pressed{color: #E680BD;}
+QTabBar::tab:hover{color: #66A3FF;background:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #fafafa, stop: 0.4 #f4f4f4,stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);}
+QTabBar::tab:selected{color: #E680BD;}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="documentMode">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/1/icons/设置.png</normaloff>:/1/icons/设置.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>课程设置</string>
+     </attribute>
+     <widget class="QPushButton" name="confirm_course_admin_button">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>480</y>
+        <width>101</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>确认</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/1/icons/确认.png</normaloff>:/1/icons/确认.png</iconset>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="admin_setcourse_tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>611</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>选择栏</string>
+       </property>
+       <property name="icon">
+        <iconset resource="icons.qrc">
+         <normaloff>:/1/icons/选择.png</normaloff>:/1/icons/选择.png</iconset>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="admin_add_button">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>50</y>
+        <width>101</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>增加课程</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/1/icons/增加课程.png</normaloff>:/1/icons/增加课程.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="admin_del_button">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>100</y>
+        <width>101</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>删除课程</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/1/icons/减少课程.png</normaloff>:/1/icons/减少课程.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="back_admin_button">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>480</y>
+        <width>101</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>退出</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/1/icons/exit.png</normaloff>:/1/icons/exit.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="admin_reset_button">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>230</y>
+        <width>101</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>重置</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/1/icons/重置.png</normaloff>:/1/icons/重置.png</iconset>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/1/icons/统计.png</normaloff>:/1/icons/统计.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>选课统计</string>
+     </attribute>
+     <widget class="QPushButton" name="update_admin_button">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>50</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>更新</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/1/icons/更新.png</normaloff>:/1/icons/更新.png</iconset>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="admin_display_tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>110</y>
+        <width>851</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <row>
+       <property name="text">
+        <string>1班</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>2班</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>3班</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>4班</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>总人数</string>
+       </property>
+      </row>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>70</y>
+      <width>201</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="icons.qrc">:/1/icons/管理员.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>confirm_course_admin_button</tabstop>
+  <tabstop>update_admin_button</tabstop>
+  <tabstop>admin_display_tableWidget</tabstop>
+ </tabstops>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,24 @@
+<RCC>
+  <qresource prefix="1">
+    <file>icons/select_lesson.png</file>
+    <file>icons/eye_on.png</file>
+    <file>icons/eye_hide.png</file>
+    <file>icons/window_icon.png</file>
+    <file>icons/exit.png</file>
+    <file>icons/增加课程.png</file>
+    <file>icons/减少课程.png</file>
+    <file>icons/重置.png</file>
+    <file>icons/确认.png</file>
+    <file>icons/更新.png</file>
+    <file>icons/查询.png</file>
+    <file>icons/管理员.png</file>
+    <file>icons/学生.png</file>
+    <file>icons/统计.png</file>
+    <file>icons/选择.png</file>
+    <file>icons/课程.png</file>
+    <file>icons/设置.png</file>
+    <file>icons/注册.png</file>
+    <file>icons/班级.png</file>
+    <file>icons/下拉.png</file>
+  </qresource>
+</RCC>
