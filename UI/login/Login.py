@@ -171,5 +171,5 @@ class Ui_Dialog(object):
         self.label_4.setText(_translate("Dialog", "账号:"))
         self.label_3.setText(_translate("Dialog", "密码:"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Dialog", "教务"))
-import icons_rc
-import images_rc
+import resourse.icons_rc
+import resourse.images_rc

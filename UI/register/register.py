@@ -143,4 +143,5 @@ class Ui_Dialog(object):
         self.label.setText(_translate("Dialog", "账号:"))
         self.label_3.setText(_translate("Dialog", "重复密码:"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Dialog", "学生注册"))
-import icons_rc
+import resourse.icons_rc
+import resourse.images_rc

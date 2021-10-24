@@ -3,7 +3,7 @@ import pymysql
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 
-from Login import Ui_Dialog
+from UI.login.Login import Ui_Dialog
 from runmain_student import Main
 from runmain_admin import MainAdmin
 from runregister import Register
@@ -38,7 +38,7 @@ class Login(QDialog, Ui_Dialog):
         password = self.password_input_student.text()
 
         # 打开数据库连接
-        db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+        db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
         # 使用cursor()方法获取操作游标
         cursor = db.cursor()
         # SQL 查询语句
@@ -77,7 +77,7 @@ class Login(QDialog, Ui_Dialog):
         admin_user = self.account_input_admin.text()
         admin_password = self.password_input_admin.text()
 
-        db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+        db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
         cursor = db.cursor()
         sql = "SELECT *FROM ADMIN_ACCOUNT"
         cursor.execute(sql)

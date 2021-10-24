@@ -187,5 +187,5 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "选课统计"))
         self.student_find_button.setText(_translate("MainWindow", "查询"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "选课查询"))
-import icons_rc
-import images_rc
+import resourse.icons_rc
+import resourse.images_rc

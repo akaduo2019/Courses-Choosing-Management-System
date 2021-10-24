@@ -2,7 +2,7 @@ import pymysql
 import re
 
 from PyQt5.QtWidgets import *
-from Main_student import Ui_MainWindow
+from UI.main_stu.Main_student import Ui_MainWindow
 
 
 class Main(QMainWindow, Ui_MainWindow):
@@ -18,7 +18,7 @@ class Main(QMainWindow, Ui_MainWindow):
         self.student_find_button.clicked.connect(self.display_information) #查询按钮
 
         # 初始化学生选课表格
-        db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+        db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
         cursor = db.cursor()
         # 获取当前操作账户并清空表now_account
         try:
@@ -84,7 +84,7 @@ class Main(QMainWindow, Ui_MainWindow):
 
     # 学生选课成功，将学生信息录入模块
     def succeed_choose_course(self):
-        db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+        db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
         cursor = db.cursor()
         # 获取教务预设的课程
         try:
@@ -145,7 +145,7 @@ class Main(QMainWindow, Ui_MainWindow):
         # 存储人数
         num = []
         total_num = []
-        db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+        db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
         cursor = db.cursor()
 
         # 重新设置后,点击更新按钮，统计版的标题头应该被刷新
@@ -213,7 +213,7 @@ class Main(QMainWindow, Ui_MainWindow):
 
     # 学生查询模块
     def display_information(self):
-        db = pymysql.connect('localhost', 'root', 'clf20001212', 'management_system')
+        db = pymysql.connect('localhost', 'akaduo', 'akaduoadmin', 'management_system')
         cursor = db.cursor()
 
         # 每次点击查询按钮都要清空之前的内容

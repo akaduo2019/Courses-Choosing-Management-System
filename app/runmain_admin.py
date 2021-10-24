@@ -2,7 +2,7 @@ import pymysql
 import re
 
 from PyQt5.QtWidgets import *
-from Main_admin import Ui_MainWindow
+from UI.main_admin.Main_admin import Ui_MainWindow
 
 
 class MainAdmin(QMainWindow, Ui_MainWindow):
@@ -20,7 +20,7 @@ class MainAdmin(QMainWindow, Ui_MainWindow):
         self.admin_del_button.clicked.connect(self.delete_course)
         self.admin_reset_button.clicked.connect(self.reset_all)
 
-        db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+        db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
         cursor = db.cursor()
 
         # 选课设置板块的初始化
@@ -83,7 +83,7 @@ class MainAdmin(QMainWindow, Ui_MainWindow):
 
     # 教务界面的设置课程模块
     def admin_set_course(self):
-        db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+        db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
         cursor = db.cursor()
         # 当教务按下选课设置页面的确定按钮时，student_account表中的course和class字段内容应该被清空
         try:
@@ -142,7 +142,7 @@ class MainAdmin(QMainWindow, Ui_MainWindow):
         # 存储人数
         num = []
         total_num = []
-        db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+        db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
         cursor = db.cursor()
 
         # 重新设置后,点击更新按钮，统计版的标题头应该被刷新
@@ -214,7 +214,7 @@ class MainAdmin(QMainWindow, Ui_MainWindow):
         reply = QMessageBox.information(self, "提示", "请先保存未确认的课程，再添加课程", QMessageBox.Ok | QMessageBox.Cancel,
                                         QMessageBox.Cancel)
         if reply == QMessageBox.Ok:
-            db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+            db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
             cursor = db.cursor()
             # 当教务按下增加课程按钮并选择Ok时，student_account表中的course和class字段内容应该被清空
             try:
@@ -291,7 +291,7 @@ class MainAdmin(QMainWindow, Ui_MainWindow):
         reply = QMessageBox.information(self, "提示", "请先保存未确认的课程，再删除课程", QMessageBox.Ok | QMessageBox.Cancel
                                         , QMessageBox.Cancel)
         if reply == QMessageBox.Ok:
-            db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+            db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
             cursor = db.cursor()
             # 当教务按下删除课程按钮并选择Ok时，student_account表中的course和class字段内容应该被清空
             try:
@@ -364,7 +364,7 @@ class MainAdmin(QMainWindow, Ui_MainWindow):
         reply = QMessageBox.information(self, "提示", "将重置整个选课系统为初始状态!", QMessageBox.Yes | QMessageBox.No
                                         , QMessageBox.No)
         if reply == QMessageBox.Yes:
-            db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+            db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
             cursor = db.cursor()
             # 清空表schedule的course字段，并删除id大于4的记录
             try:

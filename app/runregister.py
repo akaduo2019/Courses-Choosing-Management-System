@@ -2,7 +2,7 @@ import pymysql
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from register import Ui_Dialog
+from UI.register.register import Ui_Dialog
 
 
 class Register(QDialog, Ui_Dialog):
@@ -40,7 +40,7 @@ class Register(QDialog, Ui_Dialog):
             self.re_password_register_input.clear()
 
         else:
-            db = pymysql.connect("localhost", "root", "clf20001212", "management_system")
+            db = pymysql.connect("localhost", "akaduo", "akaduoadmin", "management_system")
             cursor = db.cursor()
             sql = "SELECT *FROM STUDENT_ACCOUNT "
             cursor.execute(sql)

@@ -148,4 +148,5 @@ class Ui_MainWindow(object):
         item = self.admin_display_tableWidget.verticalHeaderItem(4)
         item.setText(_translate("MainWindow", "总人数"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "选课统计"))
-import icons_rc
+import resourse.icons_rc
+import resourse.images_rc
